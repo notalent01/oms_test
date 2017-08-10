@@ -5,11 +5,9 @@ import re
 import sys
 import datetime
 from bs4 import BeautifulSoup
-import locale;
-locale.getlocale()
 expectd_len = int(sys.argv[1])  #接受输入参数
-expectd_min = expectd_len - 0.5 #接受最小范围
-expectd_max = expectd_len + 0.5 #接受最大范围
+expectd_min = expectd_len - 1 #接受最小范围
+expectd_max = expectd_len + 1 #接受最大范围
 pageSize = int(sys.argv[2])
 name_list = []  # 名称
 ratio_list = []  # 分辨率
@@ -77,7 +75,9 @@ def get_expected_list():
 def save_list_result():
     with open("result/result.txt","w") as f:
         f.truncate()
-        f.write(str(get_expected_list()))
+        text = get_expected_list()
+        for i in range(len(text)):
+            f.write(str(text[i])+'\n')
         f.close()
 if __name__ == '__main__':
     save_list_result()
