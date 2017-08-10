@@ -5,6 +5,10 @@ import re
 import sys
 import datetime
 from bs4 import BeautifulSoup
+import sys
+from imp import reload
+reload(sys)
+sys.setdefaultencoding( "utf-8" )
 expectd_len = int(sys.argv[1])  #接受输入参数
 expectd_min = expectd_len - 0.5 #接受最小范围
 expectd_max = expectd_len + 0.5 #接受最大范围
