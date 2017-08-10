@@ -5,9 +5,9 @@ import re
 import sys
 import datetime
 from bs4 import BeautifulSoup
-expectd_len = int(sys.argv[1])  #接受输入参数
-expectd_min = expectd_len - int(sys.argv[2]) #接受最小范围
-expectd_max = expectd_len + int(sys.argv[3]) #接受最大范围
+expectd_len = float(sys.argv[1])  #接受输入参数
+expectd_min = expectd_len - float(sys.argv[2]) #接受最小范围
+expectd_max = expectd_len + float(sys.argv[3]) #接受最大范围
 pageSize = int(sys.argv[4])
 name_list = []  # 名称
 ratio_list = []  # 分辨率
