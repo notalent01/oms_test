@@ -8,7 +8,7 @@ def get_loginCookies():
     driver.find_element_by_xpath("//*[@id=\"domain\"]/a").click()
     driver.find_element_by_id("username").clear()
     driver.find_element_by_id("username").send_keys("chriswangs")
-    driver.find_element_by_id("password").send_keys("Wswswps01")
+    driver.find_element_by_id("password").send_keys("Wswswps02")
     driver.find_element_by_name("submit").click()
     print(driver.get_cookies())
     cookie = [item["name"] + "=" + item["value"] for item in driver.get_cookies()]
