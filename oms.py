@@ -5,9 +5,8 @@ import re
 import sys
 import datetime
 from bs4 import BeautifulSoup
-import sys
-import io
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+import locale;
+locale.getlocale()
 expectd_len = int(sys.argv[1])  #接受输入参数
 expectd_min = expectd_len - 0.5 #接受最小范围
 expectd_max = expectd_len + 0.5 #接受最大范围
