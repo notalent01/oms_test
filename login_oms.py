@@ -1,6 +1,5 @@
 from selenium import webdriver
 def get_loginCookies():
-    from selenium import webdriver
     path = r'C:\Users\chriswangs\AppData\Local\Programs\Python\Python35-32\Scripts\phantomjs.exe'
     driver = webdriver.PhantomJS(executable_path=path)
     url_login = "http://oms.synacast.com"
