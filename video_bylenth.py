@@ -73,7 +73,7 @@ def get_expected_list():
     return expected_list
 
 def save_list_result():
-    with open("result/result.txt","w") as f:
+    with open("result/lenth_result.txt","w") as f:
         f.truncate()
         text = get_expected_list()
         for i in range(len(text)):
